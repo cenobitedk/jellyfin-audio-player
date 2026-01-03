@@ -79,10 +79,8 @@ export default function Artist() {
     const getImage = useGetImage();
 
     // Set callbacks
-    const retrieveData = useCallback(() => {
-        dispatch(fetchAllAlbums());
-    }, [dispatch]);
-    const selectAlbum = useCallback((id: string) => navigation.navigate('Album', { id, album: albums[id] as Album }), [navigation, albums]);
+    const retrieveData = useCallback(() => dispatch(fetchAllAlbums()), [dispatch]);
+    const selectAlbum = useCallback((id: string) => navigation.navigate('Album', { id }), [navigation]);
     const generateItem = useCallback(({ item }: { item: string[] }) => {
         return (
             <View style={{ flexDirection: 'row', marginLeft: 10, marginRight: 10 }} key={item.join('-')}>
