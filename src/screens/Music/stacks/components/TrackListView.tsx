@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
     },
     activeText: {
-        fontWeight: '500',
+        fontWeight: '600',
     },
     discContainer: {
         flexDirection: 'row',
@@ -211,7 +211,7 @@ const TrackListView: React.FC<TrackListViewProps> = ({
                                                 styles.index,
                                                 defaultStyles.textQuarterOpacity,
                                                 currentTrack?.backendId === trackId && styles.activeText,
-                                                currentTrack?.backendId === trackId && defaultStyles.themeColorQuarterOpacity,
+                                                currentTrack?.backendId === trackId && defaultStyles.themeColorHalfOpacity,
                                                 indexWidth,
                                             ]}
                                             numberOfLines={1}
@@ -257,7 +257,7 @@ const TrackListView: React.FC<TrackListViewProps> = ({
                                                     { marginRight: 12 },
                                                     defaultStyles.textQuarterOpacity,
                                                     currentTrack?.backendId === trackId && styles.activeText,
-                                                    currentTrack?.backendId === trackId && defaultStyles.themeColorQuarterOpacity,
+                                                    currentTrack?.backendId === trackId && defaultStyles.themeColorHalfOpacity,
                                                 ]}
                                                 numberOfLines={1}
                                             >
@@ -265,7 +265,7 @@ const TrackListView: React.FC<TrackListViewProps> = ({
                                             </Text>
                                             <DownloadIcon
                                                 trackId={trackId}
-                                                fill={currentTrack?.backendId === trackId ? defaultStyles.themeColorQuarterOpacity.color : undefined}
+                                                fill={currentTrack?.backendId === trackId ? defaultStyles.themeColorHalfOpacity.color : undefined}
                                             />
                                         </View>
                                     </TrackContainer>
