@@ -19,6 +19,8 @@ gem 'logger'
 gem 'benchmark'
 gem 'mutex_m'
 gem 'abbrev'
+gem 'nkf'      # for kconv
+gem 'tsort'    # for tsort warning (optional but recommended)
 
 gem "fastlane", "~> 2.153"
 
