@@ -12,7 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 export function SafeScrollView({
     contentContainerStyle,
     ...props
-}: ScrollViewProps) {
+}: ScrollViewProps & { ref?: Ref<ScrollView> }) {
     const { top, bottom } = useNavigationOffsets();
 
     return (
