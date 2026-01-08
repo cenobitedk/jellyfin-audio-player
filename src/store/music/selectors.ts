@@ -64,7 +64,7 @@ function splitAlbumsByAlphabet(state: AppState['music']['albums']): SectionedId[
     albumIds.forEach((id) => {
         // Retrieve the album letter and corresponding letter index
         const album = albums[id];
-        const letter = album?.AlbumArtist?.toUpperCase().charAt(0);
+        const letter = album?.Name?.toUpperCase().charAt(0);
         const index = letter ? ALPHABET_LETTERS.indexOf(letter) : 26;
 
         // Then find the current row in this section (note that albums are
