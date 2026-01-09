@@ -205,8 +205,8 @@ export default function Search() {
 
     // Handlers
     const selectAlbum = useCallback((id: string) => {
-        navigation.navigate('Album', { id, album: albums[id] as Album });
-    }, [navigation, albums]);
+        navigation.navigate('Album', { id });
+    }, [navigation]);
 
     const SearchInput = React.useMemo(() => (
         <Animated.View>

@@ -10,7 +10,6 @@ import TouchableHandler from '@/components/TouchableHandler';
 import AlbumImage, { AlbumItem } from './components/AlbumImage';
 import styled from 'styled-components/native';
 import useDefaultStyles from '@/components/Colors';
-import { Album } from '@/store/music/types';
 import { Text } from '@/components/Typography';
 import { ShadowWrapper } from '@/components/Shadow';
 import { NavigationProp, StackParams } from '@/screens/types';
@@ -60,7 +59,7 @@ const Artist: React.FC = () => {
 
     // Set callbacks
     const retrieveData = useCallback(() => dispatch(fetchAllAlbums()), [dispatch]);
-    const selectAlbum = useCallback((id: string) => navigation.navigate('Album', { id, album: albums[id] as Album }), [navigation, albums]);
+    const selectAlbum = useCallback((id: string) => navigation.navigate('Album', { id }), [navigation]);
     const generateItem = useCallback(({ item }: { item: string[] }) => {
         return (
             <View style={{ flexDirection: 'row', marginLeft: 10, marginRight: 10 }} key={item.join('-')}>

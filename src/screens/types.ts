@@ -1,11 +1,10 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import { SectionArtistItem } from '@/store/music/selectors';
-import { Album } from '@/store/music/types';
 
 export type StackParams = {
     [key: string]: Record<string, unknown> | object | undefined;
     Albums: undefined;
-    Album: { id: string, album: Album };
+    Album: { id: string };
     Artists: undefined;
     Artist: SectionArtistItem;
     Playlists: undefined;

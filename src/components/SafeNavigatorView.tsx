@@ -18,7 +18,7 @@ declare module 'react' {
 export function SafeScrollView({
     contentContainerStyle,
     ...props
-}: ScrollViewProps) {
+}: ScrollViewProps & { ref?: Ref<ScrollView> }) {
     const { top, bottom } = useNavigationOffsets();
 
     return (
