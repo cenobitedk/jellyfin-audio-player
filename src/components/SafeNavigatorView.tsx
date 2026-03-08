@@ -1,4 +1,4 @@
-import React, { ForwardedRef, forwardRef } from 'react';
+import React, { ForwardedRef, forwardRef, Ref } from 'react';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { FlatList, FlatListProps, ScrollView, ScrollViewProps, SectionList, SectionListProps } from 'react-native';
 import useCurrentTrack from '../utility/useCurrentTrack';
