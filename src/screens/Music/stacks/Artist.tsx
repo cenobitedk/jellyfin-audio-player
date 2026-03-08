@@ -10,7 +10,6 @@ import { fetchAllAlbums } from '@/store/music/actions';
 import { ALBUM_CACHE_AMOUNT_OF_DAYS } from '@/CONSTANTS';
 import TouchableHandler from '@/components/TouchableHandler';
 import useDefaultStyles from '@/components/Colors';
-import { Album } from '@/store/music/types';
 import { SubHeader, Text } from '@/components/Typography';
 import { ShadowWrapper } from '@/components/Shadow';
 import { NavigationProp, StackParams } from '@/screens/types';
