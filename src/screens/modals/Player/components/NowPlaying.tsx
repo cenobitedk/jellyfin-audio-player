@@ -23,7 +23,15 @@ export default function NowPlaying() {
     }, [track, albumTrack, getImage]);
 
     const goToAlbum = useCallback(() => {
-        albumTrack && navigation.navigate('Album', { id: albumTrack.AlbumId });
+        if (albumTrack) {
+            // Close the Player modal
+            navigation.goBack();
+            // Navigate to the Music tab, then to the Album
+            navigation.navigate('Screens', {
+                screen: 'MusicTab',
+                params: { screen: 'Album', params: { id: albumTrack.AlbumId } }
+            });
+        }
     }, [albumTrack, navigation]);
 
     return (
